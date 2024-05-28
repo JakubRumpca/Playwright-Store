@@ -29,24 +29,23 @@ export class Order {
     this.postalCodeInput = page.locator('[data-test="postalCode"]');
   }
 
-  async addProduct(product: "Backpack" | "BikeLight" | "BoltTShirt" | "Jacket" | "Onesie" | "RedTShirt") {
-      let locator: Locator
-      if (product == "Backpack") {
-        locator = this.addToCartBackpack
-      } else if (product == "BikeLight") {
-        locator = this.addToCartBikeLight
-      } else if (product == "Onesie") {
-          locator = this.addToCartOnesie
-        }
-      await locator.click();
+  async addProduct(product: "Backpack" | "BikeLight" | "Onesie") {
+    let locator: Locator
+    if (product == "Backpack") {
+      locator = this.addToCartBackpack
+    } else if (product == "BikeLight") {
+      locator = this.addToCartBikeLight
+    } else if (product == "Onesie") {
+      locator = this.addToCartOnesie
+    }
+    await locator.click();
   }
 
   async removeOnesieFromProduct() {
-      await this.removeOnesieFromCart.click();
+    await this.removeOnesieFromCart.click();
   }
 
   async orderDetails(data: orderData) {
-    await this.goToOrderDetails();
     await this.checkoutButton.click();
     await this.firstNameInput.fill(data.firstName);
     await this.lastNameInput.fill(data.lastName);
