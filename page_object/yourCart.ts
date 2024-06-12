@@ -11,7 +11,7 @@ export class Cart {
   }
     
   async removeProduct(productName: string) {
-    this.removeButton = this.page.locator(`[data-test="remove-sauce-labs-${productName}"]`)
+    this.removeButton = this.page.locator(`[data-test="remove-sauce-labs-${productName}"]`);
     await this.removeButton.click();
   }
   

@@ -11,7 +11,7 @@ export class HomePage {
   }
   
   async addProduct(productName: "backpack" | "bike-light" | "onesie") {
-    this.addToCartButton = this.page.locator(`[data-test="add-to-cart-sauce-labs-${productName}"]`)
+    this.addToCartButton = this.page.locator(`[data-test="add-to-cart-sauce-labs-${productName}"]`);
     await this.addToCartButton.click();
   }
 
