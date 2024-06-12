@@ -11,14 +11,19 @@ const orderData: customerData = {
   postalCode: "84-200"
 };
 const inventoryItemListLocator: string = '[data-test="inventory-item"]';
+let homePage: HomePage;
+let cart: Cart;
 
-test('Should order backpack and bike light', async ({ page }) => {
+test.beforeEach(async ({page}) => {
   const loginPage = new LoginPage(page);
-  const homePage = new HomePage(page);
-  const customerCheckoutForm = new CustomerCheckoutForm(page);
-  const cart = new Cart(page);
-  const checkout = new Checkout(page);
+  homePage = new HomePage(page);
+  cart = new Cart(page);
   await loginPage.login(process.env.STANDARD_USER, process.env.PASSWORD);
+})
+  
+test('Should order backpack and bike light', async ({ page }) => {
+  const customerCheckoutForm = new CustomerCheckoutForm(page);
+  const checkout = new Checkout(page);
   await homePage.addProduct("backpack");
   await homePage.addProduct("bike-light");
   await homePage.goToYourCart();
@@ -30,10 +35,6 @@ test('Should order backpack and bike light', async ({ page }) => {
 });
 
 test('Should add three products to the cart and then remove one of them', async ({ page }) => {
-  const loginPage = new LoginPage(page);
-  const homePage = new HomePage(page);
-  const cart = new Cart(page);
-  await loginPage.login(process.env.STANDARD_USER, process.env.PASSWORD);
   await homePage.addProduct("backpack");
   await homePage.addProduct("bike-light");
   await homePage.addProduct("onesie");
