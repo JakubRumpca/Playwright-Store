@@ -1,4 +1,4 @@
-interface orderData {
+interface customerData {
     firstName: string;
     lastName: string;
     postalCode: string;
