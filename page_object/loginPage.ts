@@ -8,9 +8,9 @@ export class LoginPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.usernameInput = page.locator('[data-test="username"]')
-    this.passwordInput = page.locator('[data-test="password"]')
-    this.loginButtor = page.locator('[data-test="login-button"]')
+    this.usernameInput = this.page.locator('[data-test="username"]');
+    this.passwordInput = this.page.locator('[data-test="password"]');
+    this.loginButtor = this.page.locator('[data-test="login-button"]');
   }
 
   async login(username, password) {
