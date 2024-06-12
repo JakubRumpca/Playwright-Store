@@ -1,5 +1,5 @@
 # Playwright-Store
-[![Build status] (https://github.com/JakubRumpca/Playwright-Store/blob/main/.github/workflows/pipeline.yml/badge.svg)](https://github.com/JakubRumpca/Playwright-Store/actions/workflows/pipeline.yml)
+[![Build status](https://github.com/JakubRumpca/Playwright-Store/blob/main/.github/workflows/pipeline.yml/badge.svg)](https://github.com/JakubRumpca/Playwright-Store/actions/workflows/pipeline.yml)
 
 The repository contains playwright automated tests of the online store available at https://www.saucedemo.com/. The website was created for training purposes, where you can practice testing web applications on it, so using bots such as automatic tests is allowed and does not violate the regulations.
 
