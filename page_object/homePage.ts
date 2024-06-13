@@ -28,6 +28,12 @@ export class HomePage {
     const optionValue = (order == "asc") ? "az" : "za";
     await this.sortByButton.selectOption(optionValue);
   }
+ 
+  async sortByPrice(order: "asc" | "desc") { 
+    await this.sortByButton.click();
+    const optionValue = (order == "asc") ? "lohi" : "hilo";
+    await this.sortByButton.selectOption(optionValue);
+  }
 
   async checkFirstItemOnProductList() {
     return this.firstProductOnList;
