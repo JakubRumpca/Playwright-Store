@@ -5,12 +5,14 @@ export class HomePage {
   readonly shoppingCartButton: Locator;
   readonly sortByButton: Locator;
   readonly firstProductOnList: Locator;
+  readonly activeSortingOption: Locator;
   private addToCartButton: Locator;
 
   constructor(page: Page) {
     this.page = page;
     this.shoppingCartButton = this.page.locator('[data-test="shopping-cart-link"]');
     this.sortByButton = this.page.locator('[data-test="product-sort-container"]');
+    this.activeSortingOption = this.page.locator('[data-test="active-option"]');
     this.firstProductOnList = this.page.locator('[data-test="inventory-item-name"]').first();
   }
   
@@ -28,8 +30,20 @@ export class HomePage {
     const optionValue = (order == "asc") ? "az" : "za";
     await this.sortByButton.selectOption(optionValue);
   }
+ 
+  async sortByPrice(order: "asc" | "desc") { 
+    await this.sortByButton.click();
+    const optionValue = (order == "asc") ? "lohi" : "hilo";
+    await this.sortByButton.selectOption(optionValue);
+  }
 
   async checkFirstItemOnProductList() {
+    await this.firstProductOnList.waitFor();
     return this.firstProductOnList;
+  }
+
+  async checkActiveSortingOption() {
+    await this.activeSortingOption.waitFor();
+    return this.activeSortingOption;
   }
 }
