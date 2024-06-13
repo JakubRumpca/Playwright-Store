@@ -5,12 +5,14 @@ export class HomePage {
   readonly shoppingCartButton: Locator;
   readonly sortByButton: Locator;
   readonly firstProductOnList: Locator;
+  readonly activeSortingOption: Locator;
   private addToCartButton: Locator;
 
   constructor(page: Page) {
     this.page = page;
     this.shoppingCartButton = this.page.locator('[data-test="shopping-cart-link"]');
     this.sortByButton = this.page.locator('[data-test="product-sort-container"]');
+    this.activeSortingOption = this.page.locator('[data-test="active-option"]');
     this.firstProductOnList = this.page.locator('[data-test="inventory-item-name"]').first();
   }
   
@@ -37,5 +39,9 @@ export class HomePage {
 
   async checkFirstItemOnProductList() {
     return this.firstProductOnList;
+  }
+
+  async checkActiveSortingOption() {
+    return this.activeSortingOption;
   }
 }

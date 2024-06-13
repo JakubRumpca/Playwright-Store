@@ -174,9 +174,11 @@
 - Go to the online store's login page URL (https://www.saucedemo.com/).
 - Login to the user (standard_user).
 - sort products by name in descending order.
-- verify that the first product on the list is T-Shirt (Red).
+- verify that the active sorting option is "Name (Z to A)".
+- verify that the first product on the list is "T-Shirt (Red)".
 - sort products by name in ascending order.
-- verify that the first product on the list is Sauce Labs Backpack.
+- verify that the active sorting option is "Name (A to Z)".
+- verify that the first product on the list is "Sauce Labs Backpack".
 
 ### Expected Results:
 - The user successfully logs in and is redirected to the homepage.
@@ -205,9 +207,11 @@
 - Go to the online store's login page URL (https://www.saucedemo.com/).
 - Login to the user (standard_user).
 - sort products by price in descending order.
-- verify that the first product on the list is Sauce Labs Fleece Jacket.
+- verify that the active sorting option is "Price (high to low)".
+- verify that the first product on the list is "Sauce Labs Fleece Jacket".
 - sort products by price in ascending order.
-- verify that the first product on the list is Sauce Labs Onesie.
+- verify that the active sorting option is "Price (low to high)".
+- verify that the first product on the list is "Sauce Labs Onesie".
 
 ### Expected Results:
 - The user successfully logs in and is redirected to the homepage.
