@@ -153,3 +153,34 @@
 - The error message is displayed.
 
 ---
+
+## 6) Test Case: Sort by name
+
+### Test Case ID:
+- TC-06
+
+### Test Case Name:
+- Should sort the products by name in descending and ascending order.
+
+### Test Objective:
+- Verify that a user can sort products by name.
+
+### Pre-conditions:
+- The user has a valid account on the online store.
+- The user knows their login credentials and purposely sets the wrong password.
+
+### Steps:
+- Open the web browser.
+- Go to the online store's login page URL (https://www.saucedemo.com/).
+- Login to the user (standard_user).
+- sort products by name in descending order.
+- verify that the first product on the list is T-Shirt (Red).
+- sort products by name in ascending order.
+- verify that the first product on the list is Sauce Labs Backpack.
+
+### Expected Results:
+- The user successfully logs in and is redirected to the homepage.
+- Products are sorted correctly in descending order by name.
+- Products are sorted correctly in ascending order by name.
+
+---
