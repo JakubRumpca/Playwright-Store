@@ -38,10 +38,12 @@ export class HomePage {
   }
 
   async checkFirstItemOnProductList() {
+    await this.firstProductOnList.waitFor();
     return this.firstProductOnList;
   }
 
   async checkActiveSortingOption() {
+    await this.activeSortingOption.waitFor();
     return this.activeSortingOption;
   }
 }
