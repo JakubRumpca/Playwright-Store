@@ -11,6 +11,10 @@ export default defineConfig({
   use: {
     baseURL: 'https://www.saucedemo.com/',
     headless: true,
-    testIdAttribute: 'data-test'
+    trace: 'retain-on-failure',
+    testIdAttribute: 'data-test',
+    launchOptions: {
+      slowMo: 100,
+    },
   },
 });
