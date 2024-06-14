@@ -18,6 +18,7 @@ The repository contains playwright automated tests of the online store available
 - **.env.template** - User data should be hidden, but the application was created for training purposes. Secrets are available on the home page so I do not hide them in this repository, but .env file was added to .gitignore file as should. After removing ".template" from the file name, you can run the tests.
 - **/.github/workflows/pipeline.yml** - File that contains Continuous Integration/Continuous Deployment (CI/CD) configuration.
 - **TEST_CASES.md** - File that contains test cases of the implemented tests.
+- **/test-results** - Folder contains test results obtained using the Playwright Trace Viewer tool. The test results report is saved in zip format and only retained in case of failure. The file is named **"trace.zip"**, to view the report, drop the file on https://trace.playwright.dev/. The folder is also saved in pipeline. By opening workflow run in the artifacts section you can download the result of failed tests from the pipeline run.
 
 ## How to run tests
 
