@@ -1,7 +1,7 @@
-import { defineConfig } from '@playwright/test';
+import { defineConfig, devices } from '@playwright/test';
 import * as dotenv from "dotenv";
 import { testPlanFilter } from "allure-playwright/dist/testplan";
-dotenv.config({ path: __dirname+'/.env' });
+dotenv.config({ path: __dirname + '/.env' });
 
 export default defineConfig({
   testDir: './tests',
@@ -17,4 +17,18 @@ export default defineConfig({
       slowMo: 100,
     },
   },
+  projects: [
+    {
+      name: 'chromium',
+      use: devices['Desktop Chrome'],
+    },
+    {
+      name: 'firefox',
+      use: devices['Desktop Firefox'],
+    },
+    {
+      name: 'webkit',
+      use: devices['Desktop Safari'],
+    },
+  ],
 });
