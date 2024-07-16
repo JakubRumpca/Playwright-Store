@@ -25,10 +25,12 @@ export default defineConfig({
     {
       name: 'firefox',
       use: devices['Desktop Firefox'],
+      testIgnore: "tests/accessibility.spec.ts"
     },
     {
       name: 'webkit',
       use: devices['Desktop Safari'],
+      testIgnore: "tests/accessibility.spec.ts"
     },
   ],
 });

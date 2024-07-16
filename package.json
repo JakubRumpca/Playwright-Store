@@ -17,6 +17,8 @@
     "allure-playwright": "^2.15.1"
   },
   "dependencies": {
+    "@axe-core/playwright": "^4.9.1",
+    "axe-html-reporter": "^2.2.5",
     "dotenv": "^16.4.5",
     "playwright": "^1.44.1"
   }
